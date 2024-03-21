@@ -5,17 +5,22 @@ import SignUp from './pages/SignUp';
 import About from './pages/About';
 import Profile from './pages/Profile';
 import Header from './components/Header';
+//github
+import AddRestaurants from './pages/restaurants/AddRestaurants';
+import ShowRestuarant from './pages/restaurants/ShowRestuarant';
+import UpdateRestuarant from './pages/restaurants/UpdateRestaurants';
+import DeleteRestuarant from './pages/restaurants/DeleteRestuarant';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/profile" element={<Profile />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/restuarant/create' element={<AddRestaurants />} />
+      <Route path='/restuarant/details/:id' element={<ShowRestuarant />} />
+      <Route path='/restuarant/edit/:id' element={<UpdateRestuarant />} />
+      <Route path='/restuarant/delete/:id' element={<DeleteRestuarant />} />
       </Routes>
     </BrowserRouter>
   );
